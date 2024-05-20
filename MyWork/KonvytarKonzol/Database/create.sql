@@ -1,0 +1,18 @@
+CREATE DATABASE `Konyvtar` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci */
+
+
+USE Konyvtar;
+
+CREATE TABLE IF NOT EXISTS Kolcsonzok (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nev VARCHAR(255) NULL,
+    szulIdo DATETIME NULL
+)
+
+CREATE TABLE IF NOT EXISTS Kolcsonzesek (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    kolcsonzoId INT, iro VARCHAR(255) NULL, 
+    mufaj VARCHAR(255) NULL, 
+    cim VARCHAR(255) NULL, 
+    FOREIGN KEY (kolcsonzoId) REFERENCES Kolcsonzok(id)
+)

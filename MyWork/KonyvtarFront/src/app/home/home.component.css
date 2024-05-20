@@ -1,0 +1,78 @@
+
+.container {
+    background-image: url('../../assets/Bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 400px;
+    padding: 20px;
+}
+
+h1 {
+    background-color: rgba(161, 211, 54, 0.6);
+    color: white;
+    font-size: 20rem;
+    margin: 2vh 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Book1{
+    float: left;
+    width: 80%;
+}
+
+.Book2{
+    transform: rotate(180deg);
+    float: right;
+    width: 80%;
+    
+}
+
+.Book1:hover{
+    cursor: pointer;
+}
+
+.Book2:hover{
+    cursor: pointer;
+}
+
+.books {
+    border-style: solid;
+    border-color: #a1d336;
+    border-radius: 3rem;
+    border-width: 10px;    
+    display: flex;
+    justify-content: center;        
+}
+
+
+@media (max-width: 768px) {
+    /* .container{
+        background-size: cover;
+    } */
+
+    h1 {
+        font-size: 10rem;
+        margin-top: 2vh;
+    }
+
+    .books {        
+        border: 0;
+        display: block;
+        
+    }
+
+    .Book1{    
+        width: 80%; 
+        float: none;               
+    }
+
+    .Book2{
+        transform:none;       
+        width: 80%;        
+        margin-top: 10px;
+        float: none;               
+    }
+
+}
